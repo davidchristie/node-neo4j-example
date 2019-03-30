@@ -4,7 +4,7 @@ services:
   neo4j:
     environment:
       - "NEO4J_AUTH=neo4j/password"
-    image: neo4j:3.0
+    image: neo4j:3.5
     ports:
       - "17474:7474"
 
