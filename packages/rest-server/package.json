@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "neo4j-driver": "^1.7.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "name": "rest-server",
+  "private": true,
+  "scripts": {
+    "start": "npm install && nodemon index.js"
+  },
+  "version": "1.0.0"
+}

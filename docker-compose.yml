@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  neo4j:
+    environment:
+      - "NEO4J_AUTH=neo4j/password"
+    image: neo4j:3.0
+    ports:
+      - "17474:7474"
+
+  rest-server:
+    entrypoint: ["npm", "start"]
+    environment:
+      - "NEO4J_HOST=bolt://neo4j:7687"
+      - "NEO4J_PASSWORD=password"
+      - "NEO4J_USER=neo4j"
+      - "PORT=4000"
+    image: node:10
+    ports:
+      - "4000:4000"
+    volumes:
+      - "./packages/rest-server:/app"
+    working_dir: /app
